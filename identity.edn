@@ -1,5 +1,6 @@
 {:identity/did "did:web:etzhayyim.com:actor:gtin"
- :identity/also-known-as ["at://gtin.etzhayyim.com"
+ :identity/also-known-as ["https://github.com/cloud-itonami/action-gtin-registry"
+                          "at://gtin.etzhayyim.com"
                           "https://github.com/etzhayyim/com-etzhayyim-gtin"
                           "rad:bafkreifyhmyvnzrlayqywqmu437ovg7rfdnm47ebhgmpryyz3aq3qxpmm4"
                           "did:web:etzhayyim.github.io:com-etzhayyim-gtin"]

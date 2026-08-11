@@ -1,0 +1,7 @@
+{:repo/id "cloud-itonami/action-gtin-registry"
+ :repo/plane :role
+ :repo/role :product-identity-registry
+ :repo/substrate "cloud-itonami/gtin"
+ :repo/compatibility-identities ["did:web:etzhayyim.com:actor:gtin"
+                                 "did:web:gtin.etzhayyim.com"
+                                 "com.etzhayyim.gtin.*"]}
