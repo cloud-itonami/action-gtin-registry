@@ -1,5 +1,5 @@
 {:schema-version 1
- :repository "etzhayyim/com-etzhayyim-gtin"
+ :repository "cloud-itonami/action-gtin-registry"
  :classification :actor
  :canonical-actor-metadata "manifest.edn"
  :canonical-identity-metadata "identity.edn"
