@@ -10,7 +10,7 @@
   implementations agree on every valid/invalid code — covered by
   gtin.identifier-test with known GS1 vectors (Coca-Cola 5449000000996,
   Nutella 3017620422003, JAN 4902102139496, etc.)."
-  (:require [clojure.string :as str]))
+  (:require [kotoba.lang.text :as str]))
 
 ;; ── digit helpers (cljs/nbb-portable; no Character interop) ──────────────────
 

@@ -7,12 +7,12 @@
   in-memory mutation here). match resolves by exact name or slug (case-insensitive).
   Brand-owner DIDs are NEVER fabricated — owner-handle carries the kabuto handle
   and owner-did-verified defaults false until a live kakuto actor attests it."
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             [gtin.catalog :as cat]))
 
 (defn- slug
   [s]
-  (-> (str/lower-case (str s))
+  (-> (str/lower (str s))
       (str/replace #"[^a-z0-9]+" "-")
       (str/replace #"^-+|-+$" "")))
 
@@ -36,10 +36,10 @@
   "Find brand row(s) by exact name or slug (case-insensitive). Returns a seq."
   ([query] (match-brand (cat/snapshot) query))
   ([catalog query]
-   (let [q      (str/lower-case (str/trim (str query)))
+   (let [q      (str/lower (str/trim (str query)))
          q-slug (slug query)]
      (filter (fn [b]
-               (let [nm  (some-> (:gtin.brand/name b) str/lower-case)
+               (let [nm  (some-> (:gtin.brand/name b) str/lower)
                      bid (:gtin.brand/brandId b)]
                  (or (= nm q) (= bid q-slug))))
              (:brand catalog)))))

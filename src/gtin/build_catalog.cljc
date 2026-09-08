@@ -10,7 +10,7 @@
     GTIN_DATA_OUT=<repo>/data nbb --classpath <repo>/src -m gtin.build-catalog"
   (:require [clojure.edn :as edn]
             [clojure.pprint :as pp]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [gtin.identifier :as id]
             #?(:cljs ["fs" :as fs])))
 
@@ -78,7 +78,7 @@
 ;; ── helpers ──────────────────────────────────────────────────────────────────
 
 (defn- slug [s]
-  (-> (str/lower-case (str s))
+  (-> (str/lower (str s))
       (str/replace #"[^a-z0-9]+" "-")
       (str/replace #"^-+|-+$" "")))
 

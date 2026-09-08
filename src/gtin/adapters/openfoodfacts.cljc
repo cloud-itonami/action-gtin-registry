@@ -16,12 +16,12 @@
   SKIPPED, not admitted. LIVE OFF network fetch stays operator-gated
   (uchiwake G7-equivalent); this namespace is a pure transform over a record
   map and is import-safe."
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             [gtin.identifier :as id]))
 
 (defn- slug
   [s]
-  (-> (str/lower-case (str s))
+  (-> (str/lower (str s))
       (str/replace #"[^a-z0-9]+" "-")
       (str/replace #"^-+|-+$" "")))
 
