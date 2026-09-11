@@ -7,7 +7,7 @@
   kotoba-lang/unspsc). The RUNTIME reads only the generated data/*.edn, keeping
   the standalone repository contract (CLAUDE.md L149-156). Run from superproject root:
 
-    GTIN_DATA_OUT=<repo>/data nbb --classpath <repo>/src -m gtin.build-catalog"
+    GTIN_DATA_OUT=<repo>/data kbb --backend sci --classpath <repo>/src -m gtin.build-catalog"
   (:require [clojure.edn :as edn]
             [clojure.pprint :as pp]
             [kotoba.lang.text :as str]
@@ -218,4 +218,4 @@
     (spit-edn "category.edn" category-edn)
     (println ";; done.")))
 
-;; nbb: `nbb -m gtin.build-catalog` resolves -main directly (no *main-cli-fn*).
+;; nbb: `kbb --backend sci -m gtin.build-catalog` resolves -main directly (no *main-cli-fn*).

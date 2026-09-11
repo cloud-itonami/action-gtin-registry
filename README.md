@@ -8,5 +8,5 @@ repository owns governed registration, normalization, quality review, and
 publication workflows.
 
 The historical GTIN DID, `gtin.etzhayyim.com`, and `com.etzhayyim.*` protocol
-namespaces remain compatibility identities. Run `bb run_tests.clj` to verify
+namespaces remain compatibility identities. Run `kbb run_tests.cljk` to verify
 the actor contracts.

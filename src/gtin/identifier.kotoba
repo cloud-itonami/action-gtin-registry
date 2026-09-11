@@ -4,7 +4,7 @@
 
   normalize-gtin / gtin-check-digit-ok are a spec-faithful (GS1 mod-10) re-impl of
   com-etzhayyim-uchiwake/methods/uchiwake_edn.cljc:150-179. This repo's standalone
-  contract (CLAUDE.md L149-156, bb run_tests.clj superproject-independent) forbids
+  contract (CLAUDE.md L149-156, kbb run_tests.cljk superproject-independent) forbids
   requiring uchiwake, so the logic is kept here and written cljs/nbb-portable
   (no Character/.charAt interop). The GS1 algorithm is a fixed spec, so the two
   implementations agree on every valid/invalid code — covered by
