@@ -61,7 +61,7 @@
 
 (defn resolve-alias
   "{:codeType :gtin|:jan|:upc|:ean  :codeValue \"...\"} →
-  {:canonicalProductId :productDid}, or nil. Implements resolveAlias (CLAUDE.md)."
+  {:canonicalProductId :productDid}, or nil. Implements resolveAlias (AGENTS.md)."
   [{:keys [codeType codeValue] :as _q}]
   (ensure-loaded)
   (let [aliases (:alias @catalog)

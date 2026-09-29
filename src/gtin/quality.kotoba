@@ -4,7 +4,7 @@
   Implements the manifest's Quality capability over the committed catalog. These
   are data-integrity checks — the catalog should never have two rows claiming the
   same canonical GTIN-14, and a barcode must not resolve to two trade items. The
-  packaging-split rule encodes CLAUDE.md path-resolve rule 5: different pack
+  packaging-split rule encodes AGENTS.md path-resolve rule 5: different pack
   sizes split the DID even when brand + model match."
   (:require [gtin.catalog :as cat]))
 

@@ -4,7 +4,7 @@
 
   normalize-gtin / gtin-check-digit-ok are a spec-faithful (GS1 mod-10) re-impl of
   com-etzhayyim-uchiwake/methods/uchiwake_edn.cljc:150-179. This repo's standalone
-  contract (CLAUDE.md L149-156, kbb run_tests.cljk superproject-independent) forbids
+  contract (AGENTS.md L149-156, kbb run_tests.cljk superproject-independent) forbids
   requiring uchiwake, so the logic is kept here and written cljs/nbb-portable
   (no Character/.charAt interop). The GS1 algorithm is a fixed spec, so the two
   implementations agree on every valid/invalid code — covered by
@@ -90,7 +90,7 @@
 (defn product-did
   "code-type ∈ #{:gtin :jan :upc :ean :prod} + code-value → canonical product DID.
   e.g. :jan '4902102139496' → did:web:etzhayyim.com:actor:gtin:product:jan_4902102139496
-  (CLAUDE.md Examples, new scheme; identity.edn :identity/did is the actor root)."
+  (AGENTS.md Examples, new scheme; identity.edn :identity/did is the actor root)."
   [code-type code-value]
   (str actor-did ":product:" (name code-type) "_" code-value))
 

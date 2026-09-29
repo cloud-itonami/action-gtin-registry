@@ -5,7 +5,7 @@
 
   DEVELOPMENT-TIME ONLY — reads superproject-relative paths (uchiwake,
   kotoba-lang/unspsc). The RUNTIME reads only the generated data/*.edn, keeping
-  the standalone repository contract (CLAUDE.md L149-156). Run from superproject root:
+  the standalone repository contract (AGENTS.md L149-156). Run from superproject root:
 
     GTIN_DATA_OUT=<repo>/data kbb --backend sci --classpath <repo>/src -m gtin.build-catalog"
   (:require [clojure.edn :as edn]
